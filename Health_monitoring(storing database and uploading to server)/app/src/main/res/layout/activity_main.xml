@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.group_23.MainActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/plotgraph"
+        android:layout_width="0dp"
+        android:layout_height="271dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/plotgraph1"
+        android:layout_width="0dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="130dp"
+        android:text="Run"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="130dp"
+        android:text="Stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="176dp"
+        android:text="Upload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="176dp"
+        android:text="Download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewPatientID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Patient id"
+        app:layout_constraintStart_toStartOf="@+id/editTextPatientID"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPatientAge"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:text="Age"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPatientAge"
+        app:layout_constraintStart_toStartOf="@+id/editTextPatientAge"
+        app:layout_constraintTop_toTopOf="@+id/textViewPatientID" />
+
+    <TextView
+        android:id="@+id/textViewPatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/editTextPatientName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPatientID"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRun"
+        app:layout_constraintStart_toStartOf="@+id/buttonRun"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPatientID" />
+    <EditText
+        android:id="@+id/editTextPatientAge"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginStart="20dp"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/editTextPatientID"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPatientID" />
+
+    <EditText
+        android:id="@+id/editTextPatientName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:layout_marginStart="100dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/buttonStop"
+        app:layout_constraintStart_toEndOf="@+id/textViewPatientAge"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPatientName" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupGender"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="100dp"
+            android:text="Male"
+            app:layout_constraintEnd_toEndOf="@+id/buttonRun"
+            app:layout_constraintStart_toEndOf="@+id/buttonRun"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRun" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="100dp"
+            android:text="Female"
+            app:layout_constraintEnd_toEndOf="@+id/plotgraph"
+            app:layout_constraintStart_toStartOf="@+id/radioButtonMale"
+            app:layout_constraintTop_toBottomOf="@+id/buttonStop"
+            tools:layout_editor_absoluteY="67dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="X-axis: Green Y-axis: Red         Z-axis: Blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpload" />
+
+</android.support.constraint.ConstraintLayout>
